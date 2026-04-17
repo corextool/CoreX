@@ -22,11 +22,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y openjdk-17-jdk
 
-      - name: 🏗️ بدء بناء تطبيق CoreX
+      - name: - name: 🏗️ بدء بناء تطبيق CoreX
         id: build_step
-        run: |
-          # محاولة بناء التطبيق
-          run: run: flet build apk --project "corex" --product "CoreX Tool" --org "com.corex.root"
+        run: flet build apk --project "corex" --product "CoreX Tool" --org "com.corex.root"
         continue-on-error: true # السماح باستمرار السكربت حتى لو فشل البناء لإظهار التقرير
 
       - name: 📝 إظهار ملخص الحالة (مع علامة X الحمراء عند الفشل)
