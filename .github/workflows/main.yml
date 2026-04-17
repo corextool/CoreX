@@ -24,7 +24,7 @@ jobs:
 
       - name: 🏗️ بدء بناء تطبيق CoreX
         id: build_step
-        run: flet build apk --project "corex" --product "CoreX Tool" --org "com.corex.root"
+        run: yes | flet build apk --project "corex" --product "CoreX Tool" --org "com.corex.root"
         continue-on-error: true
 
       - name: 📝 إظهار ملخص الحالة
